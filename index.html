@@ -29,7 +29,7 @@
         }
 
         a,
-        button{
+        button {
             cursor: url('https://cur.cursors-4u.net/cursors/cur-11/cur1054.cur'), auto;
         }
 
@@ -414,9 +414,15 @@
         }
 
         @media (max-width: 600px) {
+            .skill-logos {
+                grid-template-columns: repeat(2, 1fr);
+                /* force 2 columns */
+                gap: 20px;
+            }
+
             .skill-logos img {
-                width: 85px;
-                height: 85px;
+                width: 82px;
+                height: 82px;
             }
         }
     </style>
