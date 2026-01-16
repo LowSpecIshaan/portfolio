@@ -405,6 +405,20 @@
             padding: 0 !important;
         }
 
+        @media (max-width: 600px) {
+            .skillmenu{
+                margin-top: -20px;
+            }
+            .skillmenu li {
+                font-size: 0.8rem;
+                /* smaller text */
+                padding: 6px 14px;
+                /* smaller pill shape */
+                border-radius: 20px;
+                margin-bottom: 0px;
+            }
+        }
+
         /* Tablets */
         @media (max-width: 900px) {
             .skill-logos img {
@@ -415,14 +429,14 @@
 
         @media (max-width: 600px) {
             .skill-logos {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(4, 1fr);
                 /* force 2 columns */
                 gap: 20px;
             }
 
             .skill-logos img {
-                width: 82px;
-                height: 82px;
+                width: 58px;
+                height: 58px;
             }
         }
     </style>
