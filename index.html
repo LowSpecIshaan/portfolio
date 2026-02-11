@@ -20,13 +20,30 @@
 
         body {
             font-family: "JetBrains Mono", monospace;
-            background-color: #131313;
+            background-color: #000000;
+            background-image:
+                linear-gradient(rgba(255, 255, 255, 0.13) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.13) 1px, transparent 1px);
+            background-size: 40px 40px;
+            animation: gridMove 2s linear infinite;
+
             color: #333;
             line-height: 1.6;
-            padding: 0px;
+            padding: 0;
             margin: 0;
             cursor: url('https://cur.cursors-4u.net/cursors/cur-11/cur1054.cur'), auto;
         }
+
+        @keyframes gridMove {
+            from {
+                background-position: 0 0, 0 0;
+            }
+
+            to {
+                background-position: 0 40px, 0 40px;
+            }
+        }
+
 
         a,
         button {
@@ -42,28 +59,28 @@
 
         /* Header Styling */
         header {
-            background-color: rgb(27, 27, 27);
-            color: rgb(183, 248, 255);
+            background-color: #000000;
+            color: rgb(255, 255, 255);
             padding: 15px 0;
             margin: 0;
-            box-shadow: 1px 1px 3px rgba(0, 16, 28, 0.737);
+            box-shadow: 0 0.5px 0 rgb(255, 255, 255);
             position: sticky;
             top: 0;
             transition: 0.2s ease-in-out;
             z-index: 9999;
         }
 
-        .hideOnPC {
-            fill: rgb(183, 248, 255);
+        .hideOnPC button {
+            fill: rgb(255, 255, 255);
         }
 
         header.scrolled {
-            background-color: rgb(47, 0, 0);
-            color: rgb(229, 252, 255);
+            background-color: #0d0d0d;
+            color: rgb(255, 255, 255);
         }
 
         header.scrolled nav ul li a {
-            color: rgb(229, 252, 255);
+            color: rgb(255, 255, 255);
         }
 
         header h2 {
@@ -75,7 +92,7 @@
         }
 
         header h3 {
-            margin-left: 67px;
+            margin-left: 19px;
             font-size: 1.3rem;
             font-weight: normal;
             text-align: left;
@@ -95,15 +112,14 @@
         }
 
         header nav ul li a {
-            color: rgb(183, 248, 255);
+            color: rgb(255, 255, 255);
             text-decoration: none;
             font-size: 1.1rem;
             padding: 5px;
         }
 
         header nav ul li a:hover {
-            background-color: rgb(183, 248, 255);
-            color: rgb(27, 27, 27);
+            color: rgb(241, 255, 38);
         }
 
         .sidebar {
@@ -113,7 +129,7 @@
             height: 100vh;
             width: 250px;
             z-index: 10000;
-            background-color: rgb(183, 248, 255);
+            background-color: rgb(255, 255, 255);
             backdrop-filter: blur(10px);
             box-shadow: -5px 0px 5px rgba(0, 0, 0, 0.167);
             display: flex;
@@ -177,42 +193,43 @@
         }
 
         main h1 {
-            font-size: 2rem;
+            font-size: 2.5rem;
             margin-top: 20px;
             margin-bottom: 35px;
-            color: rgb(183, 248, 255);
+            color: rgb(255, 255, 255);
             text-align: center;
         }
 
         main h2 {
             font-size: 1.3rem;
             margin-bottom: 15px;
-            color: rgb(183, 248, 255);
+            color: rgb(255, 255, 255);
             text-align: center;
         }
 
         main p {
             font-size: 1.2rem;
             margin-bottom: 30px;
-            color: rgb(183, 248, 255);
+            color: rgb(255, 255, 255);
             text-align: center;
         }
 
         main h2 a {
             font-size: 1.3rem;
             margin-bottom: 15px;
-            color: rgb(183, 248, 255);
+            color: rgb(255, 255, 255);
             text-align: center;
         }
 
         .intro-tile {
             margin: 40px auto;
+            margin-bottom: 72px;
             padding: 30px;
             width: 85%;
             max-width: 900px;
 
             background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.15);
+            border: 1px solid rgb(255, 255, 255);
             backdrop-filter: blur(6px);
 
             border-radius: 20px;
@@ -226,7 +243,7 @@
 
         .intro-name {
             font-size: 2.2rem;
-            color: rgb(183, 248, 255);
+            color: rgb(255, 255, 255);
             font-weight: 700;
             margin-bottom: 10px;
         }
@@ -234,7 +251,7 @@
         .intro-text p {
             font-size: 1.2rem;
             line-height: 1.5;
-            color: rgb(183, 248, 255);
+            color: rgb(255, 255, 255);
             max-width: 450px;
         }
 
@@ -323,10 +340,10 @@
             text-align: center;
             margin-top: 0px;
             padding: 18px;
-            background-color: rgb(27, 27, 27);
-            box-shadow: 3px 3px 5px rgba(0, 16, 28, 0.737);
+            background-color: rgb(18, 18, 18);
+            box-shadow: 0 -0.5px 0 white;
             color: white;
-            font-size: 1.1rem;
+            font-size: 0.8rem;
         }
 
         footer img {
@@ -345,9 +362,9 @@
 
         .skillmenu li {
             list-style: none;
-            background: rgba(183, 248, 255, 0.15);
-            border: 1px solid rgb(183, 248, 255);
-            color: rgb(183, 248, 255);
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgb(255, 255, 255);
+            color: rgb(255, 255, 255);
             padding: 10px 20px;
             border-radius: 30px;
             font-size: 1.1rem;
@@ -357,7 +374,7 @@
 
         /* Hover effect */
         .skillmenu li:hover {
-            background: rgb(183, 248, 255);
+            background: #ffffff;
             color: #1b1b1b;
             transform: translateY(-4px);
         }
@@ -406,9 +423,10 @@
         }
 
         @media (max-width: 600px) {
-            .skillmenu{
+            .skillmenu {
                 margin-top: -20px;
             }
+
             .skillmenu li {
                 font-size: 0.8rem;
                 /* smaller text */
@@ -439,19 +457,101 @@
                 height: 52px;
             }
         }
+
+        .project-tile {
+            margin: 40px auto;
+            padding: 25px;
+            width: 85%;
+            max-width: 950px;
+
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid white;
+            backdrop-filter: blur(6px);
+
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            gap: 25px;
+
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+            transition: 0.3s ease;
+        }
+
+        .project-img-wrapper img {
+            width: 260px;
+            border-radius: 6px;
+            border: 2px solid rgb(255, 255, 255);
+            object-fit: cover;
+        }
+
+        .project-info h2 {
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .project-info p {
+            color: white;
+            line-height: 1.5;
+        }
+
+        .project-buttons {
+            margin-top: 15px;
+            margin-left: 210px;
+        }
+
+        .project-buttons a {
+            display: inline-block;
+            padding: 10px 18px;
+            margin-right: 10px;
+
+            background: rgb(241, 255, 38);
+            color: black;
+            text-decoration: none;
+            border-radius: 20px;
+
+            font-weight: 600;
+            transition: 0.25s;
+        }
+
+        .project-buttons a:hover {
+            transform: translateY(-2px);
+            background: rgb(238, 255, 106);
+        }
+
+        @media (max-width: 900px) {
+            .project-tile {
+                flex-direction: column;
+                text-align: center;
+                width: 100%;
+            }
+
+            .project-buttons {
+                margin-top: 15px;
+                margin-left: 0px;
+            }
+
+            .project-buttons a {
+                margin-bottom: 10px;
+            }
+
+            .project-img-wrapper img {
+                width: 100%;
+                max-width: 320px;
+            }
+        }
     </style>
 </head>
 
 <body>
     <header>
         <h2>ISHAAN GUPTA</h2>
-        <h3>STUDENT</h3>
+        <h3>FULL STACK DEV</h3>
         <nav>
             <ul>
                 <li class="hideOnMobile"><a href="#">Home</a></li>
                 <li class="hideOnMobile"><a href="#skills">Skills</a></li>
                 <li class="hideOnMobile"><a href="#projects">Projects</a></li>
-                <li class="hideOnMobile"><a href="#foot">Contact</a></li>
+                <li class="hideOnMobile"><a href="#contact">Contact</a></li>
                 <li class="hideOnPC" onclick=showSidebar()><button><svg xmlns="http://www.w3.org/2000/svg" height="30px"
                             viewBox="0 -1160 960 960" width="30px">
                             <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
@@ -471,7 +571,7 @@
                 <li><a onclick=hideSidebar() href="#">Home</a></li>
                 <li><a onclick=hideSidebar() href="#skills">Skills</a></li>
                 <li><a onclick=hideSidebar() href="#projects">Projects</a></li>
-                <li><a onclick=hideSidebar() href="#foot">Contact</a></li>
+                <li><a onclick=hideSidebar() href="#contact">Contact</a></li>
             </ul>
         </nav>
         <div onclick=hideSidebar()>
@@ -486,7 +586,8 @@
                         solutions.
                     </p>
 
-                    <button class="resume-btn" onclick="window.open('Ishaan Gupta Resume - Summer Intern.pdf', '_blank')">
+                    <button class="resume-btn"
+                        onclick="window.open('Ishaan Gupta Resume - Summer Intern.pdf', '_blank')">
                         My Resume
                     </button>
 
@@ -577,53 +678,129 @@
             <h1>
                 &lt;PROJECTS&gt;
             </h1>
-            <h2>
-                <a target="_blank" class="hideOnMobile"
-                    href="https://github.com/LowSpecIshaan/Supp">Supp – Group Music Listening App</a>
-                <a target="_blank" class="hideOnPC" href="https://github.com/LowSpecIshaan/Supp">Supp – Group Music Listening App</a>
-            </h2>
-            <p>
-                Developed a real-time group music listening platform enabling users to create and join rooms with synchronized playback across participants using Python(Django), ReactJS & PostgreSQL.
-            </p>
-            <h2>
-                <a target="_blank" class="hideOnMobile"
-                    href="https://github.com/LowSpecIshaan/Sanjeevani">Sanjeevani – Health Record System for Workers</a>
-                <a target="_blank" class="hideOnPC" href="https://github.com/LowSpecIshaan/Sanjeevani">Sanjeevani – Health Record System for Workers</a>
-            </h2>
-            <p>
-                I built a full-stack health record system with secure Aadhaar-based authentication and role-based access using Python(Flask), SQLAlchemy, and MySQL.
-            </p>
-            <h2>
-                <a target="_blank" class="hideOnMobile"
-                    href="https://ishaan-gupta.itch.io/the-real-covid-platformer-pcmaclinux">The Real COVID Platformer</a>
-                <a target="_blank" class="hideOnPC" href="https://ishaan-gupta.itch.io/the-real-covid-platformer">The Real COVID Platformer</a>
-            </h2>
-            <p>
-                I made a game for Android and Windows using Unity back when I was in 9th grade(During the COVID-19 pandemic).
-            </p>
-            <h2>
-                <a target="_blank" class="hideOnMobile"
-                    href="https://lowspecishaan.github.io/TicTacToe/">2-Player TicTacToe Game</a>
-                <a target="_blank" class="hideOnPC" href="https://lowspecishaan.github.io/TicTacToe/">2-Player TicTacToe Game</a>
-            </h2>
-            <p>
-                I built a web app using vanilla JavaScript for playing Tic Tac Toe with your friends on the same device.
-            </p>
+            <div class="project-tile">
+
+                <div class="project-img-wrapper">
+                    <img src="images/supp.png" alt="Supp Project">
+                </div>
+
+                <div class="project-info">
+                    <h2>Supp – Group Music Listening App</h2>
+
+                    <p>
+                        Developed a real-time group music listening platform enabling users
+                        to create and join rooms with synchronized playback using
+                        Django, ReactJS, SoundCloud API & PostgreSQL.
+                    </p>
+
+                    <div class="project-buttons">
+                        <a href="https://github.com/LowSpecIshaan/Supp" target="_blank">
+                            GitHub
+                        </a>
+
+                        <a href="wait.html" target="_blank">
+                            Live
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="project-tile">
+
+                <div class="project-img-wrapper">
+                    <img src="images/sanjeevani.png" alt="Supp Project">
+                </div>
+
+                <div class="project-info">
+                    <h2>Sanjeevani –
+                        Health Record System for Workers</h2>
+
+                    <p>
+                        I built a full-stack health record system with secure Aadhaar-based authentication and
+                        role-based access
+                        using Python(Flask), SQLAlchemy, and MySQL.
+                    </p>
+
+                    <div class="project-buttons">
+                        <a href="https://github.com/LowSpecIshaan/Sanjeevani" target="_blank">
+                            GitHub
+                        </a>
+
+                        <a href="wait.html" target="_blank">
+                            Live
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="project-tile">
+
+                <div class="project-img-wrapper">
+                    <img src="images/covid.png" alt="Supp Project">
+                </div>
+
+                <div class="project-info">
+                    <h2>The Real COVID
+                        Platformer</h2>
+
+                    <p>
+                        I made a game for Android and Windows using Unity back when I was in 9th grade(During the
+                        COVID-19
+                        pandemic).
+                    </p>
+
+                    <div class="project-buttons">
+                        <a href="https://ishaan-gupta.itch.io/the-real-covid-platformer-pcmaclinux" target="_blank">
+                            Itch.io info page
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="project-tile">
+
+                <div class="project-img-wrapper">
+                    <img src="images/tictactoe.png" alt="Supp Project">
+                </div>
+
+                <div class="project-info">
+                    <h2>2-Player
+                        TicTacToe Game</h2>
+
+                    <p>
+                        I built a web app using vanilla JavaScript for playing Tic Tac Toe with your friends on the same
+                        device.
+                    </p>
+
+                    <div class="project-buttons">
+                        <a href="https://github.com/LowSpecIshaan/TicTacToe" target="_blank">
+                            GitHub
+                        </a>
+
+                        <a href="https://lowspecishaan.github.io/TicTacToe/" target="_blank">
+                            Live
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div onclick=hideSidebar()>
+            <div class="contact" id="contact"></div>
+            <h1>
+                &lt;CONTACT&gt;
+            </h1>
+            
+
+            </div>
         </div>
     </main>
     <footer>
-        <div id = "foot">
-        <p>Thanks for Visiting this Page!</p>
-        <p>Contact Me:</p>
-        <a target="_blank"
-            href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSDbFhNlkmrGFKBXtDrwgpvSvJvPtlRlLGGtbDQzfGlNXXLMQVVHpHVrRFfQLmGNthfMZfdB"><img
-                src="https://purepng.com/public/uploads/large/purepng.com-gmail-icon-android-kitkatsymbolsiconsapp-iconsandroid-kitkatandroid-44-721522597631zhsr9.png"
-                alt="mail" height="50px"></a>
-        <a target="_blank" href="https://www.linkedin.com/in/ishaan-gupta-11296a2a8"><img
-                src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="mail"
-                height="50px"></a>
-        <a target="_blank" href="https://x.com/onoicri"><img
-                src="https://upload.wikimedia.org/wikipedia/commons/b/b7/X_logo.jpg" alt="mail" height="50px"></a>
+        <div id="foot">
+            <p>© 2026 Ishaan Gupta | All right reserved</p>
         </div>
     </footer>
     <script>
@@ -658,10 +835,3 @@
 </body>
 
 </html>
-
-
-
-
-
-
-
