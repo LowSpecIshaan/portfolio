@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Coming Soon</title>
+    <link rel="icon" type="image/png" href="images/IshaanLogo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+
+            font-family: "JetBrains Mono", monospace;
+            color: white;
+
+            background-color: #000;
+            background-image:
+                linear-gradient(rgba(255,255,255,0.15) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.15) 1px, transparent 1px);
+            background-size: 40px 40px;
+            animation: gridMove 2s linear infinite;
+        }
+
+        @keyframes gridMove {
+            from { background-position: 0 0, 0 0; }
+            to { background-position: 0 40px, 0 40px; }
+        }
+
+        main {
+            flex: 1;
+            flex-direction: column;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2rem;
+
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #121212;
+            border-top: 1px solid white;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+        <h2>Thank you for submitting the form.</h2>
+        <h3>Redirecting in <span style = "color: #00ff95;" id = "num"></span> seconds...</h3>
+    </main>
+
+    <footer>
+        © 2026 Ishaan Gupta | All rights reserved
+    </footer>
+    <script>
+        let num = document.getElementById("num");
+        let x = 5;
+        num.textContent = x;
+
+        setTimeout(()=>{
+            window.location.replace("index.html");
+        }, 5000);
+
+        let timer = setInterval(()=>{
+            x--;
+            num.textContent = x;
+
+            if(x === 0){
+                clearInterval(timer);
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
