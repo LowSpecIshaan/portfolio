@@ -19,7 +19,7 @@
         }
 
         body {
-            font-family: "JetBrains Mono", monospace;
+            font-family: "Poppins", monospace;
             background-color: #000000;
             background-image:
                 linear-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 1px),
@@ -128,9 +128,9 @@
             height: 100vh;
             width: 250px;
             z-index: 10000;
-            background-color: rgb(255, 255, 255);
+            background-color: rgb(0, 0, 0);
             backdrop-filter: blur(10px);
-            box-shadow: -5px 0px 5px rgba(0, 0, 0, 0.167);
+            box-shadow: -1px 0 0 white;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
@@ -149,15 +149,14 @@
         }
 
         main nav ul li a {
-            color: rgb(27, 27, 27);
+            color: rgb(255, 255, 255);
             text-decoration: none;
             font-size: 1.1rem;
             padding: 5px;
         }
 
         main nav ul li a:hover {
-            background-color: rgb(27, 27, 27);
-            color: rgb(183, 248, 255);
+            color: #00ff95;
             transition: none;
         }
 
@@ -263,7 +262,7 @@
             border-radius: 50%;
             object-fit: cover;
             padding: 0 !important;
-            border: 4px solid #00ff95;
+            border: 4px solid #ffffff;
         }
 
         @media (max-width: 700px) {
@@ -293,7 +292,6 @@
             padding: 12px 25px;
             font-size: 1.1rem;
             font-weight: 600;
-
             background: #00ff95;
             color: #1b1b1b;
             border: none;
@@ -312,7 +310,7 @@
 
         @media (max-width: 700px) {
             .resume-btn {
-                width: 80%;
+                width: 82.8%;
                 margin-left: auto;
                 margin-right: auto;
             }
@@ -477,7 +475,7 @@
 
         .project-buttons {
             margin-top: 15px;
-            margin-left: 210px;
+            margin-left: 220px;
         }
 
         .project-buttons a {
@@ -508,7 +506,7 @@
 
             .project-buttons {
                 margin-top: 15px;
-                margin-left: 0px;
+                margin-left: 12px;
             }
 
             .project-buttons a {
@@ -657,7 +655,7 @@
         <nav>
             <ul class="sidebar">
                 <li onclick=hideSidebar()><button><svg xmlns="http://www.w3.org/2000/svg" height="30px"
-                            viewBox="0 -1160 960 960" width="30px" fill="rgb(27, 27, 27)">
+                            viewBox="0 -1160 960 960" width="30px" fill="rgb(255, 255, 255)">
                             <path
                                 d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
                         </svg></button></li>
@@ -956,4 +954,5 @@
         })
     </script>
 </body>
+
 </html>
