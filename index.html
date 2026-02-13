@@ -456,17 +456,95 @@
             transition: 0.3s ease;
         }
 
+        .project-img-wrapper {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+        }
+
         .project-img-wrapper img {
             width: 260px;
             border-radius: 6px;
             border: 2px solid rgb(255, 255, 255);
             object-fit: cover;
+            opacity: 0.3;
+        }
+
+        .play-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            font-size: 50px;
+            color: rgb(255, 255, 255);
+            border-radius: 50%;
+
+            width: 70px;
+            height: 70px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            transition: 0.25s ease;
+        }
+
+        .project-img-wrapper:hover .play-icon {
+            transform: translate(-50%, -50%) scale(0.9);
+        }
+
+        .video-modal {
+            display: none;
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.85);
+            z-index: 99999;
+
+            justify-content: center;
+            align-items: center;
+        }
+
+        .video-modal video {
+            width: 80%;
+            max-width: 900px;
+            border-radius: 10px;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            font-size: 40px;
+            color: white;
+            cursor: pointer;
         }
 
         .project-info h2 {
             color: white;
             margin-bottom: 10px;
         }
+
+        .tech-stack {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 10px 0 15px 0;
+        }
+
+        .tech-stack span {
+            padding: 5px 12px;
+            font-size: 0.85rem;
+            border-radius: 10px;
+
+            background: rgba(255, 255, 255, 0.12);
+            color: white;
+
+            transition: 0.2s ease;
+        }
+
 
         .project-info p {
             color: white;
@@ -685,7 +763,8 @@
                 </div>
 
                 <div class="intro-img-wrapper">
-                    <img src="images/mypiccropped.jpg" onmouseover="this.src='images/ye.jpg'" onmouseout="this.src='images/mypiccropped.jpg'" class="profile-img" alt="Ishaan">
+                    <img src="images/mypiccropped.jpg" onmouseover="this.src='images/ye.jpg'"
+                        onmouseout="this.src='images/mypiccropped.jpg'" class="profile-img" alt="Ishaan">
                 </div>
 
             </div>
@@ -772,16 +851,26 @@
             <div class="project-tile">
 
                 <div class="project-img-wrapper">
-                    <img src="images/supp.png" alt="Supp Project">
+                    <a href="images/supp-demo.mp4" target="_blank"><img src="images/supp.png" alt="Supp Project">
+                    <div class="play-icon">
+                        ▶
+                    </div>
+                    </a>
                 </div>
 
                 <div class="project-info">
                     <h2>Supp – Group Music Listening App</h2>
 
+                    <div class="tech-stack">
+                        <span>Django</span>
+                        <span>ReactJS</span>
+                        <span>SoundCloud API</span>
+                        <span>PostgreSQL</span>
+                    </div>
+
                     <p>
-                        Developed a real-time group music listening platform enabling users
-                        to create and join rooms with synchronized playback using
-                        Django, ReactJS, SoundCloud API & PostgreSQL.
+                        A real-time group music listening platform enabling users
+                        to create and join rooms with synchronized playback.
                     </p>
 
                     <div class="project-buttons">
@@ -800,17 +889,27 @@
             <div class="project-tile">
 
                 <div class="project-img-wrapper">
-                    <img src="images/sanjeevani.png" alt="Supp Project">
+                    <a href="wait.html" target="_blank"><img src="images/sanjeevani.png" alt="Supp Project">
+                    <div class="play-icon">
+                        ▶
+                    </div>
+                    </a>
                 </div>
 
                 <div class="project-info">
                     <h2>Sanjeevani –
-                        Health Record System for Workers</h2>
+                        Health Record for Workers</h2>
+
+                    <div class="tech-stack">
+                        <span>Flask</span>
+                        <span>JavaScript</span>
+                        <span>MySQL</span>
+                        <span>SQLAlchemy</span>
+                    </div>
 
                     <p>
-                        I built a full-stack health record system with secure Aadhaar-based authentication and
-                        role-based access
-                        using Python(Flask), SQLAlchemy, and MySQL.
+                        A full-stack health record system with secure Aadhaar-based authentication and
+                        role-based access.
                     </p>
 
                     <div class="project-buttons">
@@ -829,12 +928,22 @@
             <div class="project-tile">
 
                 <div class="project-img-wrapper">
-                    <img src="images/covid.png" alt="Supp Project">
+                    <a href="https://ishaan-gupta.itch.io/the-real-covid-platformer" target="_blank"><img src="images/covid.png" alt="Supp Project">
+                    <div class="play-icon">
+                        ▶
+                    </div>
+                    </a>
                 </div>
 
                 <div class="project-info">
                     <h2>The Real COVID
                         Platformer</h2>
+
+                    <div class="tech-stack">
+                        <span>C#</span>
+                        <span>Unity</span>
+                        <span>Photoshop</span>
+                    </div>
 
                     <p>
                         I made a game for Android and Windows using Unity back when I was in 9th grade(During the
@@ -843,7 +952,7 @@
                     </p>
 
                     <div class="project-buttons">
-                        <a href="https://ishaan-gupta.itch.io/the-real-covid-platformer-pcmaclinux" target="_blank">
+                        <a href="https://ishaan-gupta.itch.io/the-real-covid-platformer" target="_blank">
                             Itch.io info page
                         </a>
                     </div>
@@ -854,12 +963,20 @@
             <div class="project-tile">
 
                 <div class="project-img-wrapper">
-                    <img src="images/tictactoe.png" alt="Supp Project">
+                    <a href="https://lowspecishaan.github.io/TicTacToe/" target="_blank"><img src="images/tictactoe.png" alt="Supp Project">
+                    <div class="play-icon">
+                        ▶
+                    </div>
+                    </a>
                 </div>
 
                 <div class="project-info">
                     <h2>2-Player
                         TicTacToe Game</h2>
+
+                    <div class="tech-stack">
+                        <span>JavaScript</span>
+                    </div>
 
                     <p>
                         I built a web app using vanilla JavaScript for playing Tic Tac Toe with your friends on the same
@@ -897,7 +1014,7 @@
 
                 <input type="text" name="name" placeholder="Your Name" required>
                 <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <textarea id="message" name="message" placeholder="Your Message" required></textarea>
 
                 <button type="submit">Send Message</button>
             </form>
@@ -952,6 +1069,26 @@
                 bar.style.fill = 'rgb(183, 248, 255)';
             }
         })
+
+        function openVideo() {
+            document.getElementById("videoModal").style.display = "flex";
+        }
+
+        function closeVideo() {
+            const modal = document.getElementById("videoModal");
+            const video = document.getElementById("projectVideo");
+
+            modal.style.display = "none";
+            video.pause();
+            video.currentTime = 0;
+        }
+
+        let messageField = document.getElementById("message");
+        if(window.innerWidth > 700){
+            messageField.rows = 3;
+        }else{
+            messageField.rows = 5;
+        }
     </script>
 </body>
 
