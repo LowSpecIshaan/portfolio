@@ -22,8 +22,8 @@
             font-family: "Poppins", monospace;
             background-color: #000000;
             background-image:
-                linear-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255, 255, 255, 0.15) 1px, transparent 1px);
+                linear-gradient(rgba(255, 255, 255, 0.2) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.2) 1px, transparent 1px);
             background-size: 40px 40px;
             animation: gridMove 2s linear infinite;
 
@@ -459,7 +459,6 @@
         .project-img-wrapper {
             position: relative;
             display: inline-block;
-            cursor: pointer;
         }
 
         .project-img-wrapper img {
@@ -467,57 +466,11 @@
             border-radius: 6px;
             border: 2px solid rgb(255, 255, 255);
             object-fit: cover;
-            opacity: 0.3;
         }
 
-        .play-icon {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-
-            font-size: 50px;
-            color: rgb(255, 255, 255);
-            border-radius: 50%;
-
-            width: 70px;
-            height: 70px;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            transition: 0.25s ease;
-        }
-
-        .project-img-wrapper:hover .play-icon {
-            transform: translate(-50%, -50%) scale(0.9);
-        }
-
-        .video-modal {
-            display: none;
-            position: absolute;
-            inset: 0;
-            background: rgba(0, 0, 0, 0.85);
-            z-index: 99999;
-
-            justify-content: center;
-            align-items: center;
-        }
-
-        .video-modal video {
-            width: 80%;
-            max-width: 900px;
-            border-radius: 10px;
-        }
-
-        .close-btn {
-            position: absolute;
-            top: 20px;
-            right: 40px;
-            font-size: 40px;
-            color: white;
-            cursor: pointer;
+        .project-img-wrapper:hover {
+            transform: scale(0.98);
+            opacity: 0.8;
         }
 
         .project-info h2 {
@@ -750,7 +703,7 @@
                 <div class="intro-text">
                     <h1 class="intro-name">Ishaan Gupta</h1>
                     <p>
-                        I am a 2nd year BE student at Thapar Institute of Engineering and Technology.
+                        2nd year BE undergrad at Thapar Institute of Engineering and Technology.<br>
                         I am passionate about technology and constantly learning new skills to build innovative
                         solutions.
                     </p>
@@ -851,10 +804,7 @@
             <div class="project-tile">
 
                 <div class="project-img-wrapper">
-                    <a href="images/supp-demo.mp4" target="_blank"><img src="images/supp.png" alt="Supp Project">
-                    <div class="play-icon">
-                        ▶
-                    </div>
+                    <a href="https://supp.igupta.site/" target="_blank"><img src="images/supp.png" alt="Supp Project">
                     </a>
                 </div>
 
@@ -878,7 +828,7 @@
                             GitHub
                         </a>
 
-                        <a href="wait.html" target="_blank">
+                        <a href="https://supp.igupta.site/" target="_blank">
                             Live
                         </a>
                     </div>
@@ -890,9 +840,6 @@
 
                 <div class="project-img-wrapper">
                     <a href="wait.html" target="_blank"><img src="images/sanjeevani.png" alt="Supp Project">
-                    <div class="play-icon">
-                        ▶
-                    </div>
                     </a>
                 </div>
 
@@ -929,9 +876,6 @@
 
                 <div class="project-img-wrapper">
                     <a href="https://ishaan-gupta.itch.io/the-real-covid-platformer" target="_blank"><img src="images/covid.png" alt="Supp Project">
-                    <div class="play-icon">
-                        ▶
-                    </div>
                     </a>
                 </div>
 
@@ -964,9 +908,6 @@
 
                 <div class="project-img-wrapper">
                     <a href="https://lowspecishaan.github.io/TicTacToe/" target="_blank"><img src="images/tictactoe.png" alt="Supp Project">
-                    <div class="play-icon">
-                        ▶
-                    </div>
                     </a>
                 </div>
 
